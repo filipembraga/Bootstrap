@@ -3,33 +3,44 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Bootstrap Test</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 	<style type="text/css">
-	body{
-		background: grey;
-	}
+		body{
+			background: grey;
+		}
+		.alert{
+			display: none;
+		}
+
 	</style>
 
 </head>
 <body>
-	<fieldset>
-		<legend>Cadastro</legend>
-		<div>
-			<label>Nome: </label>
-			<input type="text" name="">
-		</div>
-		<div>
-			<label>Sobrenome: </label>
-			<input type="text" name="">
-		</div>
-		<hr>
-		<button>Enviar</button>
-	</fieldset>
+	<div class="container">
+		<fieldset>
+			<legend>Cadastro</legend>
+			<div class="form-group">
+				<label>Nome: </label>
+				<input style="border: 2px solid red;" type="text" name="" class="form-control" placeholder="Digite o nome">
+			</div>
+			<div class="form-group">
+				<label>Sobrenome: </label>
+				<input type="text" name="" class="form-control" placeholder="Digite o sobrenome">
+			</div>
+			<div class="alert alert-success" role="alert">
+				This is a success alert—check it out!
+			</div>
+			<div class="alert alert-danger" role="alert">
+				This is a danger alert—check it out!
+			</div>
+			<hr>
+			<button class="btn btn-success">Enviar</button>
+		</fieldset>
+	</div>
 
+	<script type="text/javascript">
 
-		<script type="text/javascript">
+	</script>
 
-		</script>
-
-
-	</body>
-	</html>
+</body>
+</html>
