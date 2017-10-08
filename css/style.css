@@ -4,3 +4,22 @@ body{
 .alert{
 		display: none;
 }
+
+#coluna-1{
+	width: 50%;
+	float:left; 
+	padding-right: 20px;
+
+}
+
+#coluna-2{
+	width: 50%;
+	float:right; 
+	padding-left: 20px;
+
+}
+
+.clear {
+    clear: both;
+}
+

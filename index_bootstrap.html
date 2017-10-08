@@ -11,20 +11,39 @@
 	<div class="container">
 		<fieldset>
 			<legend>Cadastro</legend>
-			<div class="form-group">
-				<label>Nome: </label>
-				<input id="nome" type="text" name="" class="form-control" placeholder="Digite o nome">
+			<div id="coluna-1">	
+				<div class="form-group">
+					<label>Nome: </label>
+					<input id="nome" type="text" name="" class="form-control" placeholder="Digite o nome">
+				</div>
+				<div class="form-group">
+					<label>Telefone: </label>
+					<input id="telefone" type="text" name="" class="form-control" placeholder="Digite o telefone">
+				</div>
 			</div>
-			<div class="form-group">
-				<label>Sobrenome: </label>
-				<input id="sobrenome" type="text" name="" class="form-control" placeholder="Digite o sobrenome">
+			<div id="coluna-2">
+				<div class="form-group">
+					<label>Sobrenome: </label>
+					<input id="sobrenome" type="text" name="" class="form-control" placeholder="Digite o sobrenome">
+				</div>
+				<div class="form-group">
+					<label>Operadora: </label>
+					<select id="operadora" type="text" name="" class="form-control" placeholder="Digite a operadora">
+						<option value="default">--Selecione--</option>
+						<option value="claro">Claro</option>
+						<option value="oi">OI</option>
+						<option value="tim">Tim</option>
+						<option value="vivo">Vivo</option>
+					</select>
+				</div>
 			</div>
-			<div id="msg" class="alert" role="alert">
-				This is a success alert—check it out!
+			<div class="clear">
+				<div id="msg" class="alert" role="alert">
+					This is a success alert—check it out!
+				</div>
+				<hr/>
+				<button class="btn btn-success" onclick="validaForm()">Enviar</button>
 			</div>
-		
-			<hr>
-			<button class="btn btn-success" onclick="validaForm()">Enviar</button>
 		</fieldset>
 	</div>
 
