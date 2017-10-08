@@ -1,5 +1,7 @@
 var campoNome = document.querySelector('#nome');
 var campoSobrenome = document.querySelector('#sobrenome');
+var campoTelefone = document.querySelector('#telefone');
+var campoOperadora = document.querySelector('#operadora');
 var msgErro = document.querySelector('#msgErro');
 var msgSucesso = document.querySelector('#msgSucesso');
 
@@ -9,8 +11,10 @@ function validaForm(){
 	limpaValicao();
 	validaCampo(campoNome, "nome");
 	validaCampo(campoSobrenome, "sobrenome");
+	validaCampo(campoTelefone, "telefone");
+	validaCampo(campoOperadora, "operadora");
 
-	if(campoNome.value!="" & campoSobrenome.value!=""){
+	if(campoNome.value!="" & campoSobrenome.value!="" & campoTelefone.value!="" & campoOperadora.value!=""){
 		msg.classList.remove("alert-danger");
 		msg.classList.add("alert-success");
 		msg.innerHTML = "Preenchimento completo!";
@@ -23,6 +27,8 @@ function validaForm(){
 function limpaValicao(){
 	campoNome.style.border = "";
 	campoSobrenome.style.border = "";
+	campoTelefone.style.border = "";
+	campoOperadora.style.border = "";
 	msg.innerHTML ="";
 	msg.style.display = "none";
 }

@@ -11,39 +11,39 @@
 	<div class="container">
 		<fieldset>
 			<legend>Cadastro</legend>
-			<div id="coluna-1">	
-				<div class="form-group">
+			<div class="row">	
+				<div class="form-group col-sm-6">
 					<label>Nome: </label>
 					<input id="nome" type="text" name="" class="form-control" placeholder="Digite o nome">
 				</div>
-				<div class="form-group">
-					<label>Telefone: </label>
-					<input id="telefone" type="text" name="" class="form-control" placeholder="Digite o telefone">
-				</div>
-			</div>
-			<div id="coluna-2">
-				<div class="form-group">
+				<div class="form-group col-sm-6">
 					<label>Sobrenome: </label>
 					<input id="sobrenome" type="text" name="" class="form-control" placeholder="Digite o sobrenome">
 				</div>
-				<div class="form-group">
+			</div>
+
+			<div class="row">
+				<div class="form-group col-sm-6">
+					<label>Telefone: </label>
+					<input id="telefone" type="text" name="" class="form-control" placeholder="Digite o telefone">
+				</div>
+				<div class="form-group col-sm-6">
 					<label>Operadora: </label>
 					<select id="operadora" type="text" name="" class="form-control" placeholder="Digite a operadora">
-						<option value="default">--Selecione--</option>
-						<option value="claro">Claro</option>
-						<option value="oi">OI</option>
-						<option value="tim">Tim</option>
-						<option value="vivo">Vivo</option>
+						<option value="">--Selecione--</option>
+						<option value="1">Claro</option>
+						<option value="2">OI</option>
+						<option value="3">Tim</option>
+						<option value="4">Vivo</option>
 					</select>
 				</div>
 			</div>
-			<div class="clear">
-				<div id="msg" class="alert" role="alert">
-					This is a success alert—check it out!
-				</div>
-				<hr/>
-				<button class="btn btn-success" onclick="validaForm()">Enviar</button>
+
+			<div id="msg" class="alert" role="alert">
+				This is a success alert—check it out!
 			</div>
+			<hr/>
+			<button class="btn btn-success" onclick="validaForm()">Enviar</button>
 		</fieldset>
 	</div>
 
