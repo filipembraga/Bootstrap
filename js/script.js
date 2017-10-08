@@ -1,33 +1,37 @@
+var campoNome = document.querySelector('#nome');
+var campoSobrenome = document.querySelector('#sobrenome');
+var msgErro = document.querySelector('#msgErro');
+var msgSucesso = document.querySelector('#msgSucesso');
+
 function validaForm(){
 	//document.getElementsByTagName('input')[0].style.border = "2px solid black";
 	//document.getElementsByTagName('input')[1].style.border = "2px solid black";
-	var campoNome = document.getElementById('nome');
-	var campoSobrenome = document.getElementById('sobrenome');
-	var msgErro = document.getElementById('msgErro');
-	var msgSucesso = document.getElementById('msgSucesso');
-
-	campoNome.style.border = "";
-	campoSobrenome.style.border = "";
-	msgErro.innerHTML ="";
-	msgErro.style.display = "none";
-	msgSucesso.style.display = "none";
-
-	if(campoNome.value==""){
-		campoNome.style.border = "2px solid red";
-		msgErro.innerHTML = "Preencha o nome<br>";
-		msgErro.style.display = "block";
-	}
-	
-	if(campoSobrenome.value==""){
-		campoSobrenome.style.border = "2px solid red";
-		msgErro.innerHTML += "Preencha o sobrenome";
-		msgErro.style.display = "block";
-	}
+	limpaValicao();
+	validaCampo(campoNome, "nome");
+	validaCampo(campoSobrenome, "sobrenome");
 
 	if(campoNome.value!="" & campoSobrenome.value!=""){
-		msgSucesso.innerHTML = "Preenchimento completo!";
-		msgSucesso.style.display = "block";
+		msg.classList.remove("alert-danger");
+		msg.classList.add("alert-success");
+		msg.innerHTML = "Preenchimento completo!";
+		msg.style.display = "block";
 		campoNome.value = "";
 		campoSobrenome.value = "";
+	}
+}
+
+function limpaValicao(){
+	campoNome.style.border = "";
+	campoSobrenome.style.border = "";
+	msg.innerHTML ="";
+	msg.style.display = "none";
+}
+
+function validaCampo(campo,nomeDoCampo){
+		if(campo.value==""){
+		campo.style.border = "1px solid red";
+		msg.classList.add("alert-danger");
+		msg.innerHTML += "Preencha o "+nomeDoCampo+"<br>";
+		msg.style.display = "block";
 	}
 }
